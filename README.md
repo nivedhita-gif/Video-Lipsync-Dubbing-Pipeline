@@ -21,12 +21,13 @@ An end-to-end pipeline that dubs video from one language to another and automati
 
 ## Project Structure
 
-pipeline/
-assemble_pipeline.py # Main pipeline — shot cutting, compositing, stitching
-shot_classifier.py # Stage 4 — detects which scenes need lip-sync
-speaker_detection.py # Speaker identification for multi-person scenes
-dubbing.py # Stages 1-3 — transcription, translation, TTS
-musetalk_patches.py # Patches for MuseTalk compatibility
+| File | Description |
+|------|-------------|
+| `pipeline/assemble_pipeline.py` | Main pipeline — shot cutting, compositing, stitching |
+| `pipeline/shot_classifier.py` | Stage 4 — detects which scenes need lip-sync |
+| `pipeline/speaker_detection.py` | Speaker identification for multi-person scenes |
+| `pipeline/dubbing.py` | Stages 1-3 — transcription, translation, TTS |
+| `pipeline/musetalk_patches.py` | Patches for MuseTalk compatibility |
 
 ## How it works
 
