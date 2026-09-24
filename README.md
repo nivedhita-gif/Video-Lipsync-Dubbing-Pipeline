@@ -74,6 +74,23 @@ Python · MuseTalk · OpenAI Whisper · MediaPipe · OpenCV · WebRTC VAD · lib
 - gTTS voice quality is robotic — designed to be replaced with ElevenLabs for production use
 - Speaker detection relies on audio-mouth correlation — noisy audio can reduce accuracy
 - Boundary transitions between AUDIO ONLY and LIP-SYNC segments have a subtle visual difference
+  
+## Testing
+
+To test the pipeline you'll need:
+1. A short video clip (10-30 seconds) with a person speaking clearly to camera
+2. Either the same video's audio (to test lip-sync quality) or a dubbed audio track in another language
+
+Good sources for free test videos:
+- [Pexels](https://www.pexels.com/videos/) — free CC0 licensed videos
+- [Internet Archive Prelinger Collection](https://archive.org/details/prelinger) — public domain films with clear dialogue
+
+Then run:
+```bash
+python pipeline/assemble_pipeline.py your_video.mp4 your_audio.wav output.mp4
+```
+
+Note: MuseTalk requires GPU — you'll need to run the lip-sync step on Google Colab. The pipeline will print the exact Colab cell to run after preparing segments.
 
 ## Acknowledgements
 
